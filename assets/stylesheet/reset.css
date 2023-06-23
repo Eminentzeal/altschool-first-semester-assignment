@@ -1,0 +1,186 @@
+:root {
+  font-size: 62.5%;
+  --color-primary-400: #005AE2;
+  --color-primary-300: #0065FE;
+  
+  --color-neutral-100: #FFF;
+  --color-neutral-900: #141414;
+  --gradient-color-900: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
+  --gradient-color-100: radial-gradient(circle, rgba(226,233,240,1) 24%, rgba(254,254,254,1) 54%);
+
+
+  /* --font-family-primary: 'Gilroy-Bold', sans-serif, Arial;
+  --font-family-secondary: 'Gilroy-Light', sans-serif, Arial; */
+
+  --font-family-primary: 'Questrial', sans-serif;
+
+  --font-heading: var(--font-family-primary);
+  --font-body: var(--font-family-primary);
+
+  --font-weight-bold: 600;
+  --font-weight-medium: 400;
+  --font-weight-light: 100;
+
+  
+
+  --font-size-300: 1.4rem;
+  --font-size-400: 1.6rem;
+  --font-size-500: 1.8rem;
+  --font-size-600: 2rem;
+  --font-size-700: 3.2rem;
+  --font-size-800: 4rem;
+  --font-size-900: 4.8rem;
+
+  --fs-primary-heading: var(--font-size-900);
+  --fs-secondary-heading: var(--font-size-800);
+  --fs-tertiary-heading: var(--font-size-700);
+  --fs-body: var(--font-size-400);
+  --fs-500: var(--font-size-500);
+  --fs-600: var(--font-size-600);
+
+  /* utility classes */
+
+ 
+  .text-primary-400 {
+    color: var(--color-primary-400);
+  }
+  .text-primary-300 {
+    color: var(--color-primary-300);
+  }
+  .text-neutral-900 {
+    color: var(--color-neutral-900);
+  }
+  .text-neutral-100 {
+    color: var(--color-neutral-100);
+  }
+
+  .bg-gradient-900 {
+    background: var(--gradient-color-900);
+  }
+  .bg-gradient-100 {
+    background: var(--gradient-color-100);
+  }
+  .bg-primary-300 {
+    background-color: var(--color-primary-300);
+  }
+
+  .fw-bold {
+    font-weight: var(--font-weight-bold);
+  }
+  .fw-medium {
+    font-weight: var(--font-weight-medium);
+  }
+  .fw-light {
+    font-weight: var(--font-weight-light);
+  }
+
+  .fs-primary-heading {
+    font-size: var(--fs-primary-heading);
+  }
+  .fs-secondary-heading {
+    font-size: var(--fs-secondary-heading);
+  }
+  .fs-tertiary-heading {
+    font-size: var(--fs-tertiary-heading);
+  }
+  .fs-body {
+    font-size: var(--fs-body);
+  }
+  .fs-500 {
+    font-size: var(--fs-500);
+  }
+  .fs-400 {
+    font-size: var(--fs-button);
+  }
+
+  .container {
+    max-width: 1000px;
+    /* width: max(80% 100px); */
+    margin: 0 auto;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary-300);
+    padding: 1.2rem 2.4rem;
+    border: none;
+    border-radius: 100px
+  }
+
+  .btn-outline {
+    background-color: var(--color-neutral-100);
+  }
+}
+
+/* @font-face {
+  font-family: 'Gilroy-Bold';
+  src: url(/assets/fonts/Gilroy-ExtraBold.woff);
+}
+@font-face {
+  font-family: 'Gilroy-Light';
+  src: url(/assets/fonts/Gilroy-Light.woff);
+} */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: var(--font-family-primary);
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-size: var(--font-size-400);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black);
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-300);
+}
+
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
