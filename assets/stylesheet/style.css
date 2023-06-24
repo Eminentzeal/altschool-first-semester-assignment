@@ -149,34 +149,83 @@ ul li a:hover {
 .pricing .content .row-1 {
   text-align: center;
 }
-.pricing .content .row-2 {
+
+.pricing .content .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-block: 6.8rem;
 }
 
+/* .pricing .content .card {
+  width: 300px;
+} */
 
-
-
-.row-2 {
-  max-width: 750px;
-  margin: auto;
+.pricing .content .cards .card.active {
+  border-radius: 12px;
+  transform: scale(1.1);
+  z-index: 1;
 }
 
-.silver,
-.plat {
-  float: left;
-  width: 250px;
-  background: white;
-  text-align: center;
-  border: 1px solid black;
+.pricing .content ul {
+  margin: 4rem;
 }
 
-.gold {
-  float: left;
-  position: relative;
-  width: 250px;
-  top: -50px;
-  padding: 50px 0;
-  background: #3498db;
-  text-align: center;
-  border-radius: 5px;
+.pricing .content ul li {
+  list-style-type: none;
+  width: 100%;
+  padding: 1rem 0;
 }
+
+/* .pricing ul li:nth-child(-n+3)::before {
+  content: '1';
+} */
+.pricing ul li:not(:nth-child(-n+3))::before {
+  content: url(/assets/icons/check-circle.svg);
+  padding:1rem 1rem 0 0;
+}
+.pricing .active ul ::-moz-list-bullet:not(:nth-child(-n+3))::before {
+  content: url(/assets/icons/check-circle-white.svg);
+  /* padding:1rem 1rem 0 0; */
+}
+
+.pricing .content .border {
+  border: 0.4px solid var(--color-primary-400);
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+.pricing .content .card.active .price {
+  color: #fff
+}
+
+.pricing .content .btn {
+  margin-top: 1rem;
+  height: 2.6rem;
+  width: 13.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  background: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.pricing .content .active-btn {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.pricing .content .bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+}
+
+.pricing .content .card.active .bottom-bar {
+  border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
+}
+
+
