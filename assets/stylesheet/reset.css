@@ -4,7 +4,9 @@
   --color-primary-300: #0065FE;
   
   --color-neutral-100: #FFF;
-  --color-neutral-900: #141414;
+  --color-neutral-200: #F9FBFD;
+  --color-neutral-200: #F9FBFD;
+  --color-neutral-800: #3284FF21;
   --gradient-color-900: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
   --gradient-color-100: radial-gradient(circle, rgba(226,233,240,1) 24%, rgba(254,254,254,1) 54%);
 
@@ -17,8 +19,8 @@
   --font-heading: var(--font-family-primary);
   --font-body: var(--font-family-primary);
 
-  --font-weight-bold: 600;
-  --font-weight-medium: 400;
+  --font-weight-bold: 900;
+  --font-weight-medium: 600;
   --font-weight-light: 100;
 
   
@@ -50,6 +52,9 @@
   .text-neutral-900 {
     color: var(--color-neutral-900);
   }
+  .text-neutral-200 {
+    color: var(--color-neutral-200);
+  }
   .text-neutral-100 {
     color: var(--color-neutral-100);
   }
@@ -62,6 +67,12 @@
   }
   .bg-primary-300 {
     background-color: var(--color-primary-300);
+  }
+  .bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+  }
+  .bg-neutral-800 {
+    background-color: var(--color-neutral-800);
   }
 
   .fw-bold {
@@ -94,7 +105,7 @@
   }
 
   .container {
-    max-width: 1000px;
+    max-width: 1050px;
     /* width: max(80% 100px); */
     margin: 0 auto;
   }
@@ -109,8 +120,18 @@
   .btn-outline {
     background-color: var(--color-neutral-100);
   }
+
+  .bar::before {
+    content: url(/assets/icons/Line\ 70\ .svg);
+    position: absolute;
+    top: 1rem;
+    left: -2rem;
+  }
 }
 
+span {
+  color: var(--color-primary-400);
+}
 /* @font-face {
   font-family: 'Gilroy-Bold';
   src: url(/assets/fonts/Gilroy-ExtraBold.woff);
@@ -146,10 +167,15 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+html {
+  color-scheme: light dark;
+}
+
 html,
 body {
   height: 100%;
   font-family: var(--font-family-primary);
+  
 }
 
 /* Set core body defaults */
