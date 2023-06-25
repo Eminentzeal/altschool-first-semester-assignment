@@ -7,7 +7,8 @@
   
   --color-neutral-100: #FFF;
   --color-neutral-200: #F9FBFD;
-  --color-neutral-200: #F9FBFD;
+  --color-neutral-300: #D6D6D6;
+  --color-neutral-700: #112232;
   --color-neutral-800: #3284FF21;
   --gradient-color-900: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
   --gradient-color-100: radial-gradient(circle, rgba(226,233,240,1) 24%, rgba(254,254,254,1) 54%);
@@ -149,7 +150,7 @@
   .bar::before {
     content: url(/assets/icons/Line\ 70\ .svg);
     position: absolute;
-    top: 1rem;
+    top: 0;
     left: -2rem;
   }
 }
