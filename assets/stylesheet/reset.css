@@ -1,5 +1,6 @@
 :root {
   font-size: 62.5%;
+  --color-primary-100: #3284FF;
   --color-primary-400: #005AE2;
   --color-primary-300: #0065FE;
   --color-main-text: #141414;
@@ -41,6 +42,7 @@
   --fs-body: var(--font-size-400);
   --fs-500: var(--font-size-500);
   --fs-600: var(--font-size-600);
+  --fs-300: var(--font-size-300);
   --fs-200: var(--font-size-200);
   
 
@@ -78,6 +80,9 @@
   .bg-neutral-200 {
     background-color: var(--color-neutral-200);
   }
+  .bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+  }
   .bg-neutral-800 {
     background-color: var(--color-neutral-800);
   }
@@ -110,6 +115,9 @@
   .fs-600 {
     font-size: var(--fs-600);
   }
+  .fs-300 {
+    font-size: var(--fs-300);
+  }
   .fs-200 {
     font-size: var(--fs-200);
   }
@@ -124,6 +132,7 @@
 
   .btn-primary {
     background-color: var(--color-primary-300);
+    color: var(--color-neutral-100);
     padding: 1.2rem 2.4rem;
     border: none;
     border-radius: 100px
@@ -131,6 +140,10 @@
 
   .btn-outline {
     background-color: var(--color-neutral-100);
+    color: var(--color-primary-300);
+    padding: 1.2rem 2.4rem;
+    border: 1px solid var(--color-primary-300);
+    border-radius: 100px
   }
 
   .bar::before {
@@ -179,9 +192,9 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-html {
+/* html {
   color-scheme: light dark;
-}
+} */
 
 html,
 body {
