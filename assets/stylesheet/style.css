@@ -10,10 +10,10 @@ header {
   margin-left: 40px;
 }
 
-ul li:first-child {
+.nav ul li:first-child {
   margin-left: 0;
 }
-ul li a:hover {
+.nav ul li a:hover {
   color: var(--color-primary-300);
 }
 
@@ -22,6 +22,15 @@ ul li a:hover {
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+}
+
+.hero {
+  background: rgb(226, 233, 240);
+  background: linear-gradient(
+    129deg,
+    rgba(226, 233, 240, 1) 2%,
+    rgba(255, 255, 255, 1) 65%
+  );
 }
 
 .hero .content {
@@ -37,13 +46,12 @@ ul li a:hover {
 .hero .content h1 span::before {
   content: url(/assets/img/Vector\ 3.png);
   position: absolute;
-  /* bottom: -2.2rem;
-  left: inset; */
   inset: 13rem;
 }
 .hero .content p {
+  max-width: 760px;
   line-height: 2.8rem;
-  margin-bottom: 3.2rem;
+  margin: 0 auto 3.2rem;
 }
 
 .hero .bg-underlay {
@@ -56,7 +64,6 @@ ul li a:hover {
 }
 
 .hero .bg-underlay .card {
-  /* text-align: center; */
   display: inline-flex;
   padding: 4rem 6rem;
   flex-direction: column;
@@ -66,7 +73,6 @@ ul li a:hover {
 
   border-radius: 24px;
   border: 0.5px solid var(--color-primary-400);
-  /* background: rgba(254, 254, 254, 0.1); */
   background: rgb(244, 246, 247);
   background: linear-gradient(
     90deg,
@@ -189,11 +195,11 @@ ul li a:hover {
   padding: 1rem 0;
 }
 
-.pricing ul li:not(:nth-child(-n+3))::before {
+.pricing ul li:not(:nth-child(-n + 3))::before {
   content: url(/assets/icons/check-circle.svg);
-  padding:1rem 1rem 0 0;
+  padding: 1rem 1rem 0 0;
 }
-.pricing .active ul li:not(:nth-child(-n+3))::before {
+.pricing .active ul li:not(:nth-child(-n + 3))::before {
   content: url(/assets/icons/check-circle-white.svg);
 }
 
@@ -204,7 +210,7 @@ ul li a:hover {
 }
 
 .pricing .content .card.active .price {
-  color: #fff
+  color: #fff;
 }
 
 .pricing .content .btn {
@@ -215,7 +221,11 @@ ul li a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  background: linear-gradient(135deg, rgba(163, 168, 240, 1) 0%, rgba(105, 111, 221, 1) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(163, 168, 240, 1) 0%,
+    rgba(105, 111, 221, 1) 100%
+  );
   outline: none;
   border: 0;
   font-weight: bold;
@@ -235,6 +245,7 @@ ul li a:hover {
   border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
 }
 
+/* form */
 .form {
   background: url(/assets/img/Desktop\ -\ 11.png);
   background-size: cover;
@@ -256,7 +267,7 @@ ul li a:hover {
 
 .form form input {
   margin-bottom: 2.4rem;
-  padding: .8rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 12px;
   border: 1px solid var(--color-primary-100);
   outline: none;
@@ -267,7 +278,7 @@ ul li a:hover {
   width: 100%;
 }
 .form form input:not(:first-child) {
-  display: flex
+  display: flex;
   /* width: 49%; */
 }
 
@@ -277,13 +288,12 @@ ul li a:hover {
 }
 
 input::placeholder,
-input[type=text] {
+input[type="text"] {
   color: var(--color-primary-100);
 }
 
-
-input[type=text] {
-  padding: .8rem 1.2rem;
+input[type="text"] {
+  padding: 0.8rem 1.2rem;
   color: var(--color-primary-100);
 }
 
@@ -303,8 +313,6 @@ input[type=text] {
   left: 100%;
   transform: translate(-50%, -25px);
 }
-
-
 
 /* faq */
 .faq {
@@ -326,42 +334,43 @@ input[type=text] {
   padding: 4.3rem 2rem 15.5rem;
   margin: 0 auto;
 }
-summary {
+.faq .content summary {
   cursor: pointer;
 }
 
-details {
+.faq .content details {
   border-bottom: 1px solid var(--color-neutral-300);
   margin-bottom: 3.2rem;
 }
 
-details > summary {
+.faq .content details > summary {
   list-style-type: none;
   padding: 10px;
 }
 
-details > summary::before {
-  content: '+';
+.faq .content details > summary::before {
+  content: "+";
   float: right;
 }
 
-details[open] > summary::before {
-  content: '-';
+.faq .content details[open] > summary::before {
+  content: "-";
 }
 
-details > summary::after {
-  content: '';
+.faq .content details > summary::after {
+  content: "";
   display: table;
   clear: both;
 }
 
-details > summary + * {
+.faq .content details > summary + * {
   padding: 10px;
 }
 
 /* cta */
 .cta {
   background: url(/assets/img/Rectangle.png);
+  background-size: cover;
   height: 29.9rem;
   display: flex;
   justify-content: center;
@@ -382,22 +391,19 @@ details > summary + * {
 footer {
   background: url(/assets/img/FAQs.png);
   height: 56.1rem;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 .footer {
   max-width: 1014px;
   margin: 0 auto;
-  
 }
 
 .footer .top {
-  
   display: flex;
   align-items: flex-start;
   gap: 3.9rem;
   padding: 9.5rem 2rem 0;
-  
 }
 
 .footer .top .footer-logo {
@@ -405,7 +411,7 @@ footer {
 }
 
 .footer .top .social-media a {
-  padding-inline: .8rem;
+  padding-inline: 0.8rem;
 }
 
 .footer .top .social-media a i {
@@ -438,6 +444,6 @@ footer {
   line-height: 2rem;
   padding-inline: 0.8rem;
 }
-.footer .buttom a:nth-child(2){
+.footer .buttom a:nth-child(2) {
   border-inline: 1px solid var(--color-neutral-700);
 }
