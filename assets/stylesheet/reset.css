@@ -13,10 +13,6 @@
   --gradient-color-900: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0) 100%);
   --gradient-color-100: radial-gradient(circle, rgba(226,233,240,1) 24%, rgba(254,254,254,1) 54%);
 
-
-  /* --font-family-primary: 'Gilroy-Bold', sans-serif, Arial;
-  --font-family-secondary: 'Gilroy-Light', sans-serif, Arial; */
-
   --font-family-primary: 'Questrial', sans-serif;
 
   --font-heading: var(--font-family-primary);
@@ -25,8 +21,6 @@
   --font-weight-bold: 900;
   --font-weight-medium: 600;
   --font-weight-light: 100;
-
-  
 
   --font-size-200: 2.4rem;
   --font-size-300: 1.4rem;
@@ -47,9 +41,7 @@
   --fs-200: var(--font-size-200);
   
 
-  /* utility classes */
-
- 
+  /* utility classes */ 
   .text-primary-400 {
     color: var(--color-primary-400);
   }
@@ -127,7 +119,6 @@
 
   .container {
     max-width: 1050px;
-    /* width: max(80% 100px); */
     margin: 0 auto;
   }
 
@@ -158,14 +149,6 @@
 span {
   color: var(--color-primary-400);
 }
-/* @font-face {
-  font-family: 'Gilroy-Bold';
-  src: url(/assets/fonts/Gilroy-ExtraBold.woff);
-}
-@font-face {
-  font-family: 'Gilroy-Light';
-  src: url(/assets/fonts/Gilroy-Light.woff);
-} */
 
 /* Box sizing rules */
 *,
@@ -174,28 +157,21 @@ span {
   box-sizing: border-box;
 }
 
-/* Remove default margin */
 * {
   margin: 0;
   padding: 0;
   font: inherit;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
   padding-inline-start: 0;
 }
 
-/* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
 }
-
-/* html {
-  color-scheme: light dark;
-} */
 
 html,
 body {
@@ -204,17 +180,14 @@ body {
   color: var(--color-main-text);
 }
 
-/* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-size: var(--font-size-400);
 }
 
-/* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-  
 }
 
 a {
@@ -228,8 +201,6 @@ a:hover {
   color: var(--color-primary-300);
 }
 
-
-/* Make images easier to work with */
 img,
 picture,
 svg {
